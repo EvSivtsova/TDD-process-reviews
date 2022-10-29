@@ -20,10 +20,9 @@ The review assesses how well a developer:
 * Debugs when things go wrong,
 * Delivers value to the customer in an Agile way.
 
-## Summary of my results so far
+## Summary of my results so far:
 
-| Expectation | Review 1 | Review 2 | Review 3 |
-|  | 22 Sep 2022 | 13 Oct 2022 | 24 Oct 2022  |
+| Assessed capability | 22 Sep 2022 | 13 Oct 2022 | 24 Oct 2022  |
 | :--- | :--- | :--- | :--- |
 | I use an agile process | Improving | Improving | Steady |
 | I can model anything | Steady | Steady | Strong |
