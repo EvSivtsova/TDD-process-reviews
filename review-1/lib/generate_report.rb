@@ -1,19 +1,26 @@
-def generate_report(results)
-  results_array = results.split(', ')
-  results_frequency = Hash.new(0)
-  results_array.map do |colour|
-    results_frequency[colour] += 1 if results_frequency.key(colour) == nil
+def generate_report(grades)
+  grades_array = grades.split(', ')
+  grades_frequency = count_grades(grades_array)
+  @report = ''
+  format_grades_hash_into_string(grades_frequency)
+  @report
+end
+
+private
+
+def count_grades(grades_array)
+  grades_frequency = Hash.new(0)
+  grades_array.map do |colour|
+    grades_frequency[colour] += 1 if grades_frequency.key(colour).nil?
   end
+  grades_frequency
+end
+
+def format_grades_hash_into_string(grades_frequency)
   count = 0
-  report = ''
-  results_frequency.map do |key, value|
+  grades_frequency.map do |key, value|
     count += 1
-    if results_frequency.length == count 
-      grade_string = key + ': ' + value.to_s
-    else
-      grade_string = key + ': ' + value.to_s + '\n' 
-    end
-    report +=  grade_string
+    new_line = grades_frequency.length == count ? '' : '\n'
+    @report += key + ': ' + value.to_s + new_line
   end
-  return report
 end
