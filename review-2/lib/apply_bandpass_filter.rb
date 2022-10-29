@@ -3,7 +3,7 @@ def apply_bandpass_filter(music_track, lower_limit, upper_limit)
     if frequency > lower_limit
       frequency
     else
-      20
+      lower_limit
     end 
   end
 end
