@@ -11,5 +11,10 @@ describe 'returns the colours and the count' do
       results = 'Green, Green'
       expect(generate_report(results)).to eq 'Green: 2'
     end
+
+    it 'returns "Green: 3' do
+      results = 'Green, Green, Green'
+      expect(generate_report(results)).to eq 'Green: 3'
+    end
   end
 end

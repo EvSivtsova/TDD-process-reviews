@@ -1,7 +1,4 @@
 def generate_report(results)
-  if results.split.length == 1
-    'Green: 1'
-  else
-    'Green: 2'
-  end
+  colour_frequency = results.split.length.to_s
+  'Green: ' + colour_frequency
 end
