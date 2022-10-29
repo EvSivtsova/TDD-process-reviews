@@ -12,8 +12,8 @@ def count_grades(grades_array)
   grades_range = ['Green', 'Amber', 'Red']
   grades_frequency = Hash.new(0)
   grades_array.map do |colour|
-    fail 'The grades can be only Green, Amber and Red' if grades_range.include?(colour) == false
-    grades_frequency[colour] += 1 if grades_frequency.key(colour).nil?
+    fail 'The grades can be only Green, Amber and Red' if grades_range.include?(colour.capitalize) == false
+    grades_frequency[colour.capitalize] += 1 if grades_frequency.key(colour.capitalize).nil?
   end
   grades_frequency
 end

@@ -35,5 +35,10 @@ describe 'returns the colours and the count' do
       results = 'Extra, 5'
       expect { generate_report(results) }.to raise_error 'The grades can be only Green, Amber and Red'
     end
+
+    it 'accepts the relevant colour regardless of the case used' do
+      results = 'green, GrEEn, Red, AMBER, Red'
+      expect(generate_report(results)).to eq 'Green: 2\nAmber: 1\nRed: 2'
+    end
   end
 end
