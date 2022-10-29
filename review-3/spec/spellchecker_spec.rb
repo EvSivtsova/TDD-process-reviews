@@ -27,7 +27,7 @@ describe 'SpellChecker' do
     end
 
     it 'returns "these these these" when the string is "these these these"' do
-      word_bank = ['these, these, these']
+      word_bank = ['these']
       spellchecker = SpellChecker.new(word_bank)
       sentence = 'these these these'
       result = spellchecker.check_spelling(sentence)
@@ -46,13 +46,22 @@ describe 'SpellChecker' do
       expect(result).to eq '~thsee~'
     end
 
-    it 'returns "~thsee~" when the sentence is "thsee"' do
+    it 'returns "~thsee~ ~thsee~" when the sentence is "thsee thsee"' do
       word_bank = ['these']
       spellchecker = SpellChecker.new(word_bank)
       sentence = 'thsee thsee'
       result = spellchecker.check_spelling(sentence)
 
       expect(result).to eq '~thsee~ ~thsee~'
+    end
+
+    it 'returns "~thsee~ ~thsee~ ~thsee~" when the sentence is "thsee thsee thsee"' do
+      word_bank = ['these']
+      spellchecker = SpellChecker.new(word_bank)
+      sentence = 'thsee thsee thsee'
+      result = spellchecker.check_spelling(sentence)
+
+      expect(result).to eq '~thsee~ ~thsee~ ~thsee~'
     end
   end
 end
