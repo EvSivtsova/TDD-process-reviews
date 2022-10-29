@@ -64,4 +64,17 @@ describe 'SpellChecker' do
       expect(result).to eq '~thsee~ ~thsee~ ~thsee~'
     end
   end
+
+  context 'the words are submitted in different cases' do
+    it 'returns "these" when the string is "These"' do
+      word_bank = ['these']
+      spellchecker = SpellChecker.new(word_bank)
+      sentence = 'These'
+      result = spellchecker.check_spelling(sentence)
+
+      expect(result).to eq 'These'
+    end
+  end
+
+
 end

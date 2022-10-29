@@ -7,7 +7,7 @@ class SpellChecker
     word_array = sentence.split
     new_sentence = []
     word_array.map do |word|
-      checked_word = @word_bank.include?(word) ? word : "~#{word}~"
+      checked_word = @word_bank.include?(word.downcase) ? word : "~#{word}~"
       new_sentence << checked_word
     end
     new_sentence.join(' ')
