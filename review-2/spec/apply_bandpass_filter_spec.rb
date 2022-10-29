@@ -1,6 +1,6 @@
 require 'apply_bandpass_filter'
 
-describe '#bandpass filter' do
+describe '#apply_bandpass_filter' do
   context 'the frequencies are within range' do
     it 'returns a single frequency in an array' do
       music_track = [45]
