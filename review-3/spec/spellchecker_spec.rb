@@ -6,4 +6,15 @@ describe 'SpellChecker' do
     spellchecker = SpellChecker.new(word_bank)
     expect(spellchecker).to be_an_instance_of(SpellChecker)
   end
+
+  context 'when the words in the string are correct' do
+    it 'returns "these" when the string is "these"' do
+      word_bank = ['these']
+      spellchecker = SpellChecker.new(word_bank)
+      sentence = 'these'
+      result = spellchecker.check_spelling(sentence)
+
+      expect(result).to eq 'these'
+    end
+  end
 end
