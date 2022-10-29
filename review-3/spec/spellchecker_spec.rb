@@ -45,5 +45,14 @@ describe 'SpellChecker' do
 
       expect(result).to eq '~thsee~'
     end
+
+    it 'returns "~thsee~" when the sentence is "thsee"' do
+      word_bank = ['these']
+      spellchecker = SpellChecker.new(word_bank)
+      sentence = 'thsee thsee'
+      result = spellchecker.check_spelling(sentence)
+
+      expect(result).to eq '~thsee~ ~thsee~'
+    end
   end
 end
