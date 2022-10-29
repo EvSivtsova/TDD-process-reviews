@@ -31,7 +31,7 @@ describe 'returns the colours and the count' do
   end
 
   context 'input string values other than Green, Amber and Red' do
-    it "raises error" do
+    it 'raises error' do
       results = 'Extra, 5'
       expect { generate_report(results) }.to raise_error 'The grades can be only Green, Amber and Red'
     end
