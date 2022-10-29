@@ -76,5 +76,12 @@ describe 'SpellChecker' do
     end
   end
 
+  it 'returns a an empty string when the sentence is empty' do
+    word_bank = ['these']
+    spellchecker = SpellChecker.new(word_bank)
+    sentence = ''
+    result = spellchecker.check_spelling(sentence)
 
+    expect(result).to eq ''
+  end
 end
