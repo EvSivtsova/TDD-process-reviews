@@ -6,12 +6,9 @@ class SpellChecker
   def check_spelling(sentence)
     word_array = sentence.split
     new_sentence = []
-    word_array.map do | word |
-      if @word_bank.include?(word)
-        new_sentence << word
-      else 
-        new_sentence << '~' + word + '~'
-      end
+    word_array.map do |word|
+      checked_word = @word_bank.include?(word) ? word : "~#{word}~"
+      new_sentence << checked_word
     end
     new_sentence.join(' ')
   end
