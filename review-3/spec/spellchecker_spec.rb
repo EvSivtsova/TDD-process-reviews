@@ -25,5 +25,14 @@ describe 'SpellChecker' do
 
       expect(result).to eq 'these these'
     end
+
+    it 'returns "these these these" when the string is "these these these"' do
+      word_bank = ['these, these, these']
+      spellchecker = SpellChecker.new(word_bank)
+      sentence = 'these these these'
+      result = spellchecker.check_spelling(sentence)
+
+      expect(result).to eq 'these these these'
+    end
   end
 end

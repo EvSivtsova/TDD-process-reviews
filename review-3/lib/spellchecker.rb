@@ -4,10 +4,6 @@ class SpellChecker
   end
 
   def check_spelling(sentence)
-    if sentence == 'these'
-      'these'
-    else
-      'these these'
-    end
+    sentence
   end
 end
