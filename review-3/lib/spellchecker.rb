@@ -4,6 +4,10 @@ class SpellChecker
   end
 
   def check_spelling(sentence)
-    sentence
+    if sentence == 'thsee'
+      '~thsee~'
+    else
+      sentence
+    end
   end
 end

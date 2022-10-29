@@ -35,4 +35,15 @@ describe 'SpellChecker' do
       expect(result).to eq 'these these these'
     end
   end
+
+  context 'the words in the string are incorrect' do
+    it 'returns "~thsee~" when the sentence is "thsee"' do
+      word_bank = ['these']
+      spellchecker = SpellChecker.new(word_bank)
+      sentence = 'thsee'
+      result = spellchecker.check_spelling(sentence)
+
+      expect(result).to eq '~thsee~'
+    end
+  end
 end
