@@ -53,5 +53,13 @@ describe '#apply_bandpass_filter' do
       result = apply_bandpass_filter(music_track, lower_limit, upper_limit)
       expect(result).to eq [50]
     end
+
+    it 'returns a different lower limit as a single frequency in an array' do
+      music_track = [60]
+      lower_limit = 20
+      upper_limit = 40
+      result = apply_bandpass_filter(music_track, lower_limit, upper_limit)
+      expect(result).to eq [40]
+    end
   end
 end
