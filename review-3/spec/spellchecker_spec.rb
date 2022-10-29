@@ -84,4 +84,13 @@ describe 'SpellChecker' do
 
     expect(result).to eq ''
   end
+
+  it 'returns a required output if the sentence is empty' do
+    word_bank = ['these', 'words', 'are', 'spelt', 'correctly']
+    spellchecker = SpellChecker.new(word_bank)
+    sentence = 'These words are spnelt correclty'
+    result = spellchecker.check_spelling(sentence)
+
+    expect(result).to eq 'These words are ~spnelt~ ~correclty~'
+  end
 end
