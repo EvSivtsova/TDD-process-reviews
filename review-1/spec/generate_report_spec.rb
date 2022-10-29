@@ -29,4 +29,11 @@ describe 'returns the colours and the count' do
       expect(generate_report(results)).to eq 'Green: 2\nAmber: 1\nRed: 2'
     end
   end
+
+  context 'input string values other than Green, Amber and Red' do
+    it "raises error" do
+      results = 'Extra, 5'
+      expect { generate_report(results) }.to raise_error 'The grades can be only Green, Amber and Red'
+    end
+  end
 end
