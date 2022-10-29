@@ -17,4 +17,11 @@ describe 'returns the colours and the count' do
       expect(generate_report(results)).to eq 'Green: 3'
     end
   end
+
+  context 'there are several colours' do
+    it 'returns "Green: 2\nRed: 1\n' do
+      results = 'Green, Green, Red'
+      expect(generate_report(results)).to eq 'Green: 2\nRed: 1'
+    end     
+  end
 end
