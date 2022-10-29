@@ -44,4 +44,14 @@ describe '#apply_bandpass_filter' do
       expect(result).to eq [30]
     end
   end
+
+  context 'the frequencies are above range' do
+    it 'returns the lower limit as a single frequency in an array' do
+      music_track = [60]
+      lower_limit = 20
+      upper_limit = 50
+      result = apply_bandpass_filter(music_track, lower_limit, upper_limit)
+      expect(result).to eq [50]
+    end
+  end
 end
