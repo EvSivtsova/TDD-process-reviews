@@ -23,5 +23,10 @@ describe 'returns the colours and the count' do
       results = 'Green, Green, Red'
       expect(generate_report(results)).to eq 'Green: 2\nRed: 1'
     end
+
+    it 'sorts colours from Green to Red' do
+      results = 'Green, Green, Red, Amber, Red'
+      expect(generate_report(results)).to eq 'Green: 2\nAmber: 1\nRed: 2'
+    end  
   end
 end

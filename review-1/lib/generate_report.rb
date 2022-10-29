@@ -18,9 +18,14 @@ end
 
 def format_grades_hash_into_string(grades_frequency)
   count = 0
-  grades_frequency.map do |key, value|
-    count += 1
-    new_line = grades_frequency.length == count ? '' : '\n'
-    @report += key + ': ' + value.to_s + new_line
+  grades_range = ['Green', 'Amber', 'Red']
+  grades_range.map do |grade|
+    grades_frequency.map do |colour, frequency|
+      if grade == colour
+        count += 1
+        new_line = grades_frequency.length == count ? '' : '\n'
+        @report += grade + ': ' + frequency.to_s + new_line
+      end
+    end
   end
 end
