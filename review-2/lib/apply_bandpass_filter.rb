@@ -1,5 +1,6 @@
 def apply_bandpass_filter(music_track, lower_limit, upper_limit)
   music_track.map do |frequency|
+    raise 'The frequencies must be positive whole numbers' if frequency.negative?
     if frequency > upper_limit
       upper_limit
     elsif frequency < lower_limit
@@ -7,12 +8,5 @@ def apply_bandpass_filter(music_track, lower_limit, upper_limit)
     else
       frequency
     end
-
-    # return upper_limit if frequency > upper_limit
-    # return lower_limit if frequency < lower_limit
-    # frequency
-    # # return upper_limit if frequency > upper_limit
-    # return lower_limit frequency > lower_limit
-    # frequency
   end
 end
