@@ -70,5 +70,13 @@ describe '#apply_bandpass_filter' do
       upper_limit = 50
       expect { apply_bandpass_filter(music_track, lower_limit, upper_limit) }.to raise_error 'The frequencies must be positive whole numbers'
     end
+
+    it 'raises error when the number is negative' do
+      music_track = [33.55]
+      lower_limit = 20
+      upper_limit = 50
+      result = apply_bandpass_filter(music_track, lower_limit, upper_limit)
+      expect(result).to eq [34]
+    end
   end
 end
