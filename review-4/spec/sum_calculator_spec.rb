@@ -27,5 +27,11 @@ describe "SumCalculator" do
       sum_calculator = SumCalculator.new(input);
       expect(sum_calculator.get_resulting_value).to eq ["1 + 1", 2]
     end
+
+    it "returns the sum and result if the input is '1 - 1'" do
+      input = "1 - 1"
+      sum_calculator = SumCalculator.new(input);
+      expect(sum_calculator.get_resulting_value).to eq ["1 - 1", 0]
+    end
   end 
 end
