@@ -1,8 +1,8 @@
 def calculate_sum(sum_string)
   input_array = sum_string.split
   resulting_value = [sum_string]
-  if sum_string.length == 1
-    result = input_array[0].to_i
+  if input_array.length == 1
+    result = input_array[0].to_f
   else
     result = sum_two_number(input_array)
   end

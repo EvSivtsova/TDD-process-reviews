@@ -21,7 +21,7 @@ describe 'calculate_sum' do
     end
   end
 
-  context 'if the input is a string of sum of two numbers' do
+  context 'if the input is a string of sum of two integers' do
     it 'returns the sum and result if the input is "1 + 1"' do
       input = '1 + 1'
       result = calculate_sum(input)
@@ -63,13 +63,13 @@ describe 'calculate_sum' do
       result = calculate_sum(input)
       expect(result).to eq ['6 / 2', 3]
     end
-    
+
     it 'returns the sum and result if the input is "2 * 2"' do
       input = '2 * 2'
       result = calculate_sum(input)
       expect(result).to eq ['2 * 2', 4]
     end
-    
+
     it 'returns the sum and result if the input is "3 * 2"' do
       input = '3 * 2'
       result = calculate_sum(input)
@@ -81,5 +81,13 @@ describe 'calculate_sum' do
       result = calculate_sum(input)
       expect(result).to eq ['3 * 3', 9]
     end
-  end 
+  end
+
+  context 'if the input is a string of float number / numbers' do
+    it 'returns the sum and result if the input is "1.5"' do
+      input = '1.5'
+      result = calculate_sum(input)
+      expect(result).to eq ['1.5', 1.5]
+    end
+  end
 end
