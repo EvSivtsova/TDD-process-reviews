@@ -75,5 +75,11 @@ describe "calculate_sum" do
       result = calculate_sum(input)
       expect(result).to eq ["3 * 2", 6]
     end
+
+    it "returns the sum and result if the input is '3 * 3'" do
+      input = "3 * 3"
+      result = calculate_sum(input)
+      expect(result).to eq ["3 * 3", 9]
+    end
   end 
 end
