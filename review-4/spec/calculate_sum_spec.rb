@@ -151,4 +151,12 @@ describe 'calculate_sum' do
       expect { calculate_sum(input) }.to raise_error ZeroDivisionError
     end
   end
+
+  context 'the input string contain more than two numbers' do
+    it 'calculates sum of "1 + 1 + 1"' do
+      input = '1 + 1 + 1'
+      result = calculate_sum(input)
+      expect(result).to eq ['1 + 1 + 1', 3]
+    end
+  end
 end

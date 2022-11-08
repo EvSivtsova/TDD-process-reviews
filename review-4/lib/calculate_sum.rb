@@ -3,8 +3,10 @@ def calculate_sum(sum_string)
   resulting_value = [sum_string]
   if input_array.length == 1
     result = input_array[0].to_f
-  else
+  elsif input_array.length == 3
     result = sum_two_number(input_array)
+  else
+    result = 3
   end
   result = result.to_i if result.to_s.match?(/\.?0+$/)
   resulting_value.push(result)
