@@ -176,5 +176,11 @@ describe 'calculate_sum' do
       result = calculate_sum(input)
       expect(result).to eq ['1 + 1 + 1 + 1', 4]
     end
+
+    it 'calculates sum of "2 + 1 + 1 + 1"' do
+      input = '2 + 1 + 1 + 1'
+      result = calculate_sum(input)
+      expect(result).to eq ['2 + 1 + 1 + 1', 5]
+    end
   end
 end
