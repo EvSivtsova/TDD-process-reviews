@@ -20,4 +20,12 @@ describe "SumCalculator" do
       expect(sum_calculator.get_resulting_value).to eq ["3", 3]
     end
   end
+
+  context "if the input is a string of sum of two numbers" do
+    it "returns the sum and result if the input is '1 + 1'" do
+      input = "1 + 1"
+      sum_calculator = SumCalculator.new(input);
+      expect(sum_calculator.get_resulting_value).to eq ["1 + 1", 2]
+    end
+  end 
 end
