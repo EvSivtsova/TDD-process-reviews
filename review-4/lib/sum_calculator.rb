@@ -4,10 +4,8 @@ class SumCalculator
   end
 
   def get_resulting_value
-    if @sum_string == "1"
-      ["1", 1]
-    else
-      ["2", 2]
-    end
+    resulting_value = []
+    resulting_value.push(@sum_string)
+    resulting_value.push(@sum_string.to_i)
   end
 end

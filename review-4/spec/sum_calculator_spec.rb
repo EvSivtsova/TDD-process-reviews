@@ -13,5 +13,11 @@ describe "SumCalculator" do
       sum_calculator = SumCalculator.new(input);
       expect(sum_calculator.get_resulting_value).to eq ["2", 2]
     end
+
+    it "returns 3 if the input is '3'" do
+      input = "3"
+      sum_calculator = SumCalculator.new(input);
+      expect(sum_calculator.get_resulting_value).to eq ["3", 3]
+    end
   end
 end
