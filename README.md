@@ -22,14 +22,14 @@ The review assesses how well a developer:
 
 ## Summary of my results so far:
 
-| Assessed capability | 22 Sep 2022 | 13 Oct 2022 | 24 Oct 2022  |
-| :--- | :--- | :--- | :--- |
-| I use an agile process | Improving | Improving | Steady |
-| I can model anything | Steady | Steady | Strong |
-| I can TDD anything | Improving | Improving | Strong |
-| I can program fluently | Strong | Strong | Strong |
-| I can refactor anything | Nothing there | Nothing there | Steady |
-| I can debug anything | Strong | Strong | Strong |
-| I write code that is easy to change | Improving | Steady | Steady |
-| I have a methodological approach to problem solving | Improving | Improving | Improving |
-| I can justify the way I work | Steady | Strong | Strong |
+| Assessed capability | 22 Sep 2022 | 13 Oct 2022 | 24 Oct 2022  | 8 Nov 2022 |
+| :--- | :--- | :--- | :--- | :--- |
+| I use an agile process | Improving | Improving | Steady | Steady |
+| I can model anything | Steady | Steady | Strong | Improving |
+| I can TDD anything | Improving | Improving | Strong | String |
+| I can program fluently | Strong | Strong | Strong | Strong |
+| I can refactor anything | Nothing there | Nothing there | Steady | Strong |
+| I can debug anything | Strong | Strong | Strong | Strong |
+| I write code that is easy to change | Improving | Steady | Steady | Strong |
+| I have a methodological approach to problem solving | Improving | Improving | Improving | Steady |
+| I can justify the way I work | Steady | Strong | Strong | Strong |
