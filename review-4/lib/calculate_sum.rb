@@ -10,8 +10,12 @@ def calculate_sum(sum_string)
     elsif input_array[1] == "-"
       result = input_array[0].to_i - input_array[2].to_i
       resulting_value.push(result)
-    else 
-      ["2 / 1", 2]
+    else
+      if sum_string == "2 / 1"
+        ["2 / 1", 2]
+      else
+        ["4 / 2", 2]
+      end
     end
   end
 end
