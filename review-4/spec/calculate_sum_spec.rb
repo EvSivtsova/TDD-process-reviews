@@ -115,17 +115,23 @@ describe 'calculate_sum' do
     end
   end
 
-  context 'input string contains negative numbeers and zero' do
-    it 'calcultes sum of "-1 + 1' do
+  context 'input string contains negative numbers and zero' do
+    it 'calculates sum of "-1 + 1' do
       input = '-1 + 1'
       result = calculate_sum(input)
       expect(result).to eq ['-1 + 1', 0]
     end
 
-    it 'calcultes sum of "-1 + -1' do
+    it 'calculates sum of "-1 + -1' do
       input = '-1 + -1'
       result = calculate_sum(input)
       expect(result).to eq ['-1 + -1', -2]
+    end
+
+    it 'calculates sum of "-1 - -1' do
+      input = '-1 - -1'
+      result = calculate_sum(input)
+      expect(result).to eq ['-1 - -1', 0]
     end
   end
 end
