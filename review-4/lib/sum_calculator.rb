@@ -4,8 +4,6 @@ class SumCalculator
   end
 
   def get_resulting_value
-    resulting_value = []
-    resulting_value.push(@sum_string)
-    resulting_value.push(@sum_string.to_i)
+    resulting_value = [@sum_string, @sum_string.to_i]
   end
 end
