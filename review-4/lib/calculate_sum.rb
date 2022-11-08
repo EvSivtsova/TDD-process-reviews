@@ -22,6 +22,6 @@ def sum_two_number(array_two_numbers)
   elsif array_two_numbers[1] == '/'
     array_two_numbers[0].to_i / array_two_numbers[2].to_i
   else
-    array_two_numbers[0].to_i * array_two_numbers[2].to_i
+    array_two_numbers[0].to_f * array_two_numbers[2].to_f
   end
 end
