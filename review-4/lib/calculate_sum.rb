@@ -5,12 +5,11 @@ def calculate_sum(sum_string)
     result = input_array[0].to_f
   elsif input_array.length == 3
     result = sum_two_number(input_array)
-  else
-    if sum_string == "1 + 1 + 1"
-      result = 3
-    else
-      result = 4
-    end
+  else  
+    array_two_numbers = input_array.slice!(0, 3)
+    intermediary_result = sum_two_number(array_two_numbers)
+    array_two_numbers = [intermediary_result.to_s, input_array].flatten
+    result = sum_two_number(array_two_numbers)
   end
   result = result.to_i if result.to_s.match?(/\.?0+$/)
   resulting_value.push(result)
