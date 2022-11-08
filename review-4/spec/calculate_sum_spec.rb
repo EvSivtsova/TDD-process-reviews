@@ -89,5 +89,11 @@ describe 'calculate_sum' do
       result = calculate_sum(input)
       expect(result).to eq ['1.5', 1.5]
     end
+
+    it 'returns the sum and result if the input is "1.5 + 1.5"' do
+      input = '1.5 + 1.5'
+      result = calculate_sum(input)
+      expect(result).to eq ['1.5 + 1.5', 3]
+    end
   end
 end
