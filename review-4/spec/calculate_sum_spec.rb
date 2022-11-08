@@ -114,4 +114,12 @@ describe 'calculate_sum' do
       expect(result).to eq ['1.5 / 1', 1.5]
     end
   end
+
+  context 'input string contains negative numbeers and zero' do
+    it 'calcultes sum of "-1 + 1' do
+      input = '-1 + 1'
+      result = calculate_sum(input)
+      expect(result).to eq ['-1 + 1', 0]
+    end
+  end
 end
