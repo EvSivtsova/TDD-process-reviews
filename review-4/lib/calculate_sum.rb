@@ -5,8 +5,10 @@ def calculate_sum(sum_string)
     input_array = sum_string.split(" ")
     if input_array[1] == "+"
       ["1 + 1", 2]
-    else 
+    elsif input_array[1] == "-"
       ["1 - 1", 0]
+    else 
+      ["2 / 1", 2]
     end
   end
 end

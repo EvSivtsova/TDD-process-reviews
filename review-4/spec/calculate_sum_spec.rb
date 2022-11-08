@@ -33,5 +33,11 @@ describe "calculate_sum" do
       result = calculate_sum(input);
       expect(result).to eq ["1 - 1", 0]
     end
+
+    it "returns the sum and result if the input is '2 - 1'" do
+      input = "2 / 1"
+      result = calculate_sum(input);
+      expect(result).to eq ["2 / 1", 2]
+    end
   end 
 end
