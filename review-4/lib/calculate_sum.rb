@@ -7,7 +7,8 @@ def calculate_sum(sum_string)
       result = input_array[0].to_i + input_array[2].to_i
       [sum_string, result]
     elsif input_array[1] == "-"
-      ["1 - 1", 0]
+      result = input_array[0].to_i - input_array[2].to_i
+      [sum_string, result]
     else 
       ["2 / 1", 2]
     end
