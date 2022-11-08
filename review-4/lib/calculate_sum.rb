@@ -22,6 +22,7 @@ def sum_two_number(array_two_numbers)
   when '-'
     number1 - number2
   when '/'
+    fail ZeroDivisionError if number2 == 0
     number1 / number2
   else
     number1 * number2

@@ -145,5 +145,10 @@ describe 'calculate_sum' do
       result = calculate_sum(input)
       expect(result).to eq ['-6 / -3', 2]
     end
+
+    it 'raises erros if it is division and the second number is 0 - "6 / 0"' do
+      input = '6 / 0'
+      expect { calculate_sum(input) }.to raise_error ZeroDivisionError
+    end
   end
 end
