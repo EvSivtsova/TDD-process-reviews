@@ -11,11 +11,12 @@ def calculate_sum(sum_string)
     array_two_numbers = [intermediary_result.to_s, input_array].flatten
     result = sum_two_number(array_two_numbers)
   else
-    if sum_string == "1 + 1 + 1 + 1"
-      result = 4
-    else
-      result = 5
-    end
+    array_two_numbers1 = input_array.slice!(0, 3)
+    intermediary_result1 = sum_two_number(array_two_numbers1)
+    array_two_numbers2 = [intermediary_result1.to_s, input_array.slice!(0, 2)].flatten
+    intermediary_result2 = sum_two_number(array_two_numbers2)
+    array_two_numbers3 = [intermediary_result2.to_s, input_array].flatten
+    result = sum_two_number(array_two_numbers3)
   end
   result = result.to_i if result.to_s.match?(/\.?0+$/)
   resulting_value.push(result)
