@@ -133,5 +133,11 @@ describe 'calculate_sum' do
       result = calculate_sum(input)
       expect(result).to eq ['-1 - -1', 0]
     end
+
+    it 'calculates sum of "-2 * -3' do
+      input = '-2 * -3'
+      result = calculate_sum(input)
+      expect(result).to eq ['-2 * -3', 6]
+    end
   end
 end
