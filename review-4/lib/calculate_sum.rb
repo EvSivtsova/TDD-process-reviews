@@ -5,23 +5,25 @@ def calculate_sum(sum_string)
     result = input_array[0].to_f
   else
     result = sum_two_number(input_array)
-    if result.to_s.match?(/\.?0+$/)
-      result = result.to_i
-    end
   end
+  result = result.to_i if result.to_s.match?(/\.?0+$/)
   resulting_value.push(result)
 end
 
 private
 
 def sum_two_number(array_two_numbers)
-  if array_two_numbers[1] == '+'
-    array_two_numbers[0].to_f + array_two_numbers[2].to_f
-  elsif array_two_numbers[1] == '-'
-    array_two_numbers[0].to_f - array_two_numbers[2].to_f
-  elsif array_two_numbers[1] == '/'
-    array_two_numbers[0].to_f / array_two_numbers[2].to_f
+  number1 = array_two_numbers[0].to_f
+  number2 = array_two_numbers[2].to_f
+  operator = array_two_numbers[1]
+  case operator
+  when '+'
+    number1 + number2
+  when '-'
+    number1 - number2
+  when '/'
+    number1 / number2
   else
-    array_two_numbers[0].to_f * array_two_numbers[2].to_f
+    number1 * number2
   end
 end
