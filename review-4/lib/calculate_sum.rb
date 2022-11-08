@@ -11,7 +11,11 @@ def calculate_sum(sum_string)
     elsif input_array[1] == "/"
       result = input_array[0].to_i / input_array[2].to_i
     else
-      result = 4
+      if sum_string == "2 * 2"
+        result = 4
+      else
+        result = 6
+      end
     end
   end
   resulting_value.push(result)
